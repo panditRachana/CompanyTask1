@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TableViewUserCell" rowHeight="88" id="KGk-i7-Jjw" customClass="TableViewUserCell" customModule="CompanyTask1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xm-81-RGG">
+                        <rect key="frame" x="10" y="8" width="223" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="orb-86-y9V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-Ik-O2j">
+                        <rect key="frame" x="10" y="43" width="223" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Mhs-JD-hEz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Xm-81-RGG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="BDT-tI-4wD"/>
+                    <constraint firstItem="dfg-Ik-O2j" firstAttribute="trailing" secondItem="3Xm-81-RGG" secondAttribute="trailing" id="Nt8-Nv-onV"/>
+                    <constraint firstItem="dfg-Ik-O2j" firstAttribute="top" secondItem="3Xm-81-RGG" secondAttribute="bottom" constant="5" id="OXi-sQ-Dr5"/>
+                    <constraint firstItem="3Xm-81-RGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WGq-vm-X0P"/>
+                    <constraint firstAttribute="trailing" secondItem="3Xm-81-RGG" secondAttribute="trailing" constant="10" id="lFv-IC-Xjg"/>
+                    <constraint firstItem="dfg-Ik-O2j" firstAttribute="leading" secondItem="3Xm-81-RGG" secondAttribute="leading" id="uKW-xg-9G1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <connections>
+                <outlet property="lblFirstName" destination="3Xm-81-RGG" id="WVp-me-I8O"/>
+                <outlet property="lblLastName" destination="dfg-Ik-O2j" id="Hlv-OL-n6b"/>
+            </connections>
+            <point key="canvasLocation" x="-94.927536231884062" y="45.535714285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
