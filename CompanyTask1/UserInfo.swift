@@ -17,6 +17,8 @@ struct UserInfo{
     var phone:String
     var vParameter:Int
     var firstName:String
-    var lastName:String}
+    var lastName:String
+    
+}
 
 

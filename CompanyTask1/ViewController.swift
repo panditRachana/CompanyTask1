@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         tableViewUserInfo.register(nibName, forCellReuseIdentifier: "TableViewUserCell")
     }
     
-//MARK: Fetching User Data From Api
+//MARK: Fetching UserData From Api
     func toFetchUserData()
     {
        let urlString = "https://fakestoreapi.com/users"
@@ -75,7 +75,8 @@ class ViewController: UIViewController {
         }
         dataTask.resume()
     }
-
+    
+//MARK: Fetching Products Api
     func toFetchProducts()
     {
       let urlString = "https://fakestoreapi.com/products"
@@ -124,7 +125,7 @@ class ViewController: UIViewController {
 
 
 
-//MARK: CollectionViewDataSource Method
+//MARK: CollectionViewDataSource & Delegate Method
 extension ViewController : UICollectionViewDelegate
 {
     
@@ -152,7 +153,7 @@ extension ViewController:UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:(collectionViewImages.frame.width), height: 150)
+        return CGSize(width:Int(collectionViewImages.frame.width), height: 150)
     }
 }
 
