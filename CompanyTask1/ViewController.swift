@@ -142,8 +142,12 @@ extension ViewController : UICollectionViewDataSource
     {
         let collectioViewCell = collectionViewImages.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
-        let imgUrl = NSURL(string: arrayProducts[indexPath.row].image)
-        collectioViewCell.imageProduct.sd_setImage(with:imgUrl as URL?)
+//        let imgUrl = NSURL(string: arrayProducts[indexPath.row].image)
+//        collectioViewCell.imageProduct.sd_setImage(with:imgUrl as URL?)
+        
+        let imageResize = SDImageResizingTransformer(size: CGSize(width: 150, height: 150), scaleMode:.aspectFit)
+        
+        collectioViewCell.imageProduct.sd_setImage(with: NSURL(string: arrayProducts[indexPath.row].image)as URL?,  placeholderImage: nil, context: [.imageTransformer: imageResize])
         
         return collectioViewCell
     }
@@ -153,7 +157,7 @@ extension ViewController:UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:Int(collectionViewImages.frame.width), height: 150)
+        return CGSize(width: 150, height: 150)
     }
 }
 
